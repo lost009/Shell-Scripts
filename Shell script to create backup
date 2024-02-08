@@ -1,0 +1,14 @@
+#!/bin/bash
+# Check if the source directory exists
+if [ ! -d "/root/atul" ]; then
+ echo "Source directory does not exist"
+exit 1
+fi
+# Check if the backup directory exists, create it if not
+if [ ! -d "/root/backup" ]; then
+mkdir backup
+fi
+a=$(date +"%Y.%m.%d.%H.%M.%S")
+tar -czvf /root/backup/atul-$a.tar.gz /root/atul
+echo " 
+done
