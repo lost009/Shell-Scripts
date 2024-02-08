@@ -1,0 +1,13 @@
+#!/bin/bash
+echo " this is u r current path"
+pwd
+echo " here are the files and folders with permissions in u r current path"
+ls -l
+echo " type a word "
+read a
+b=$(echo -n "$a" | wc -m)
+echo "char count is $b"
+if [[ -z "$a" ]]
+then
+echo "you didn't enter a text"
+fi
