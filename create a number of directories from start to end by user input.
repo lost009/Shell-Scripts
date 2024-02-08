@@ -1,0 +1,15 @@
+#!/bin/bash
+# Prompt the user for the starting and ending numbers
+echo " enter 1"
+read start
+echo " enter 2 "
+read end
+
+
+
+# Create directories from start to end
+for ((i=$start; i<=$end; i++)); do
+ dir_name="atul$i"
+ mkdir "$dir_name"
+
+done
